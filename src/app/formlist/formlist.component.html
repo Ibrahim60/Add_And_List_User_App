@@ -1,0 +1,14 @@
+<!-- <p>formlist works!</p> -->
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Date Of Birth</th>
+        </tr>
+        <tr *ngFor='let item of formList'>
+            <td>{{formList.firstname}}</td>
+            <td>{{formList.dob}}</td>
+        </tr>
+    </table>
+</div>

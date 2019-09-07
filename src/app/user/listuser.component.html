@@ -1,0 +1,24 @@
+<!-- <p>List User Works!</p> -->
+<!-- <div>
+    <p>First Name   <input type="text" [value]="FirstName" (input)=firstName($event)> {{FirstName}}</p>
+    <p>Last Name   <input type="text" [value]="LastName" (input)=lastName($event)> {{LastName}}</p>
+    <p>Address   <input type="text" [value]="Address" (input)=address($event)> {{Address}}</p>
+</div> -->
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor='let item of userList'>
+            <td>{{item.id}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td><a (click)='delete(item.id)'>Delete</a></td>
+            <td><a (click)='edit(item)'>Edit</a></td>
+
+        </tr>
+    </table>
+</div>

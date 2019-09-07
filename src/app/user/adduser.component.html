@@ -1,0 +1,43 @@
+<!-- <p>Add User Works!</p> -->
+
+  <div class="container">
+      <form [formGroup]='userForm' (ngSubmit)='onSubmit()'>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">First Name</label>
+            <input type="text" class="form-control" formControlName='firstName' placeholder="First Name">
+          </div>
+          <div class="form-group">
+              <label for="exampleFormControlInput2">Last Name</label>
+              <input type="text" class="form-control" formControlName='lastName' placeholder="Last Name">
+          </div>
+          <!-- <div formGroupName='skills'>
+            <label>Skill & Experience </label>&nbsp;
+            <input type="text" formControlName='skillName' placeholder="skill name">&nbsp;
+            <input type="text" formControlName='experience' placeholder="experience">&nbsp;
+          </div>&nbsp; -->
+          <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+          <!-- <button type="button" class="btn btn-primary" (click)='onload()'>Reload</button> -->
+        </form>&nbsp;
+
+        <div>
+            <table class="table">
+              <tr>
+                <th>First Name</th>
+                <td>{{userForm.value.firstName}}</td>
+              </tr>
+              <th>Last Name</th>
+              <td>{{userForm.value.lastName}}</td>
+              <!-- <tr>
+                <th>Skill</th>
+                <td>{{userForm.value.skills.skillName}}</td>
+              </tr>
+              <tr>
+                <th>Experience</th>
+                <td>{{userForm.value.skills.experience}}</td>
+              </tr> -->
+            </table>
+          </div>
+  </div>
+
+
+  
